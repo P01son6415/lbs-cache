@@ -27,24 +27,21 @@ public class RequestController {
 
         //命中缓存
         if(baseStationInfoService.hitCache(lbsData)){
-            System.out.println("取缓存结果");
             BaseStationInfo stationInfo = baseStationInfoService.getInfoByLbsData(lbsData);
             JSONObject returnData = new JSONObject();
             returnData.put("lat",stationInfo.getLat());
             returnData.put("lon",stationInfo.getLon());
             returnData.put("address",stationInfo.getAddress());
             return returnData.toJSONString();
-        }else System.out.println("未命中缓存");
+        }
 
         //未命中缓存则向API查询并添加进缓存中
         String url = lbsConf.getApi()+lbsData.toParam();
         JSONObject location = HttpUtil.httpRequestJSON(url,"GET");
 
-        System.out.println(location.getString("errcode"));
 
         //errorcode 为 0 表示返回结果正常则加入缓存
         if(location.getString("errcode").equals("0")){
-            System.out.println("加入缓存");
             BaseStationInfo stationInfo = new BaseStationInfo(lbsData.getMcc(),lbsData.getMnc(),
                     lbsData.getLac(),lbsData.getCi(),location.getString("lon"),
                     location.getString("lat"),"bd09", location.getString("radius"),
