@@ -794,73 +794,73 @@ public class BaseStationInfoExample {
             return (Criteria) this;
         }
 
-        public Criteria andReserved1IsNull() {
-            addCriterion("reserved1 is null");
+        public Criteria andCacheAgeIsNull() {
+            addCriterion("cacheAge is null");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1IsNotNull() {
-            addCriterion("reserved1 is not null");
+        public Criteria andCacheAgeIsNotNull() {
+            addCriterion("cacheAge is not null");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1EqualTo(String value) {
-            addCriterion("reserved1 =", value, "reserved1");
+        public Criteria andCacheAgeEqualTo(String value) {
+            addCriterion("cacheAge =", value, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1NotEqualTo(String value) {
-            addCriterion("reserved1 <>", value, "reserved1");
+        public Criteria andCacheAgeNotEqualTo(String value) {
+            addCriterion("cacheAge <>", value, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1GreaterThan(String value) {
-            addCriterion("reserved1 >", value, "reserved1");
+        public Criteria andCacheAgeGreaterThan(String value) {
+            addCriterion("cacheAge >", value, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1GreaterThanOrEqualTo(String value) {
-            addCriterion("reserved1 >=", value, "reserved1");
+        public Criteria andCacheAgeGreaterThanOrEqualTo(String value) {
+            addCriterion("cacheAge >=", value, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1LessThan(String value) {
-            addCriterion("reserved1 <", value, "reserved1");
+        public Criteria andCacheAgeLessThan(String value) {
+            addCriterion("cacheAge <", value, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1LessThanOrEqualTo(String value) {
-            addCriterion("reserved1 <=", value, "reserved1");
+        public Criteria andCacheAgeLessThanOrEqualTo(String value) {
+            addCriterion("cacheAge <=", value, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1Like(String value) {
-            addCriterion("reserved1 like", value, "reserved1");
+        public Criteria andCacheAgeLike(String value) {
+            addCriterion("cacheAge like", value, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1NotLike(String value) {
-            addCriterion("reserved1 not like", value, "reserved1");
+        public Criteria andCacheAgeNotLike(String value) {
+            addCriterion("cacheAge not like", value, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1In(List<String> values) {
-            addCriterion("reserved1 in", values, "reserved1");
+        public Criteria andCacheAgeIn(List<String> values) {
+            addCriterion("cacheAge in", values, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1NotIn(List<String> values) {
-            addCriterion("reserved1 not in", values, "reserved1");
+        public Criteria andCacheAgeNotIn(List<String> values) {
+            addCriterion("cacheAge not in", values, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1Between(String value1, String value2) {
-            addCriterion("reserved1 between", value1, value2, "reserved1");
+        public Criteria andCacheAgeBetween(String value1, String value2) {
+            addCriterion("cacheAge between", value1, value2, "cacheAge");
             return (Criteria) this;
         }
 
-        public Criteria andReserved1NotBetween(String value1, String value2) {
-            addCriterion("reserved1 not between", value1, value2, "reserved1");
+        public Criteria andCacheAgeNotBetween(String value1, String value2) {
+            addCriterion("cacheAge not between", value1, value2, "cacheAge");
             return (Criteria) this;
         }
 

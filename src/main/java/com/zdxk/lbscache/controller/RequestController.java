@@ -42,10 +42,7 @@ public class RequestController {
 
         //errorcode 为 0 表示返回结果正常则加入缓存
         if(location.getString("errcode").equals("0")){
-            BaseStationInfo stationInfo = new BaseStationInfo(lbsData.getMcc(),lbsData.getMnc(),
-                    lbsData.getLac(),lbsData.getCi(),location.getString("lon"),
-                    location.getString("lat"),"bd09", location.getString("radius"),
-                    location.getString("address"));
+            BaseStationInfo stationInfo = new BaseStationInfo();
             baseStationInfoService.insertBaseStationInfo(stationInfo);
         }
 

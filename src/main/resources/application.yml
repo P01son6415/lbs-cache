@@ -26,6 +26,7 @@ spring:
 
 lbs:
   api:
+  expire: 7
 
 mybatis:
   mapper-locations: classpath:mybatis/*.xml

@@ -27,4 +27,6 @@ public interface BaseStationInfoMapper {
     int updateByPrimaryKeySelective(BaseStationInfo record);
 
     int updateByPrimaryKey(BaseStationInfo record);
+
+    int setCacheAgeIncrease(Integer age);
 }

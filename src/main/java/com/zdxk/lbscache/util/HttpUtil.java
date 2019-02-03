@@ -1,22 +1,24 @@
 package com.zdxk.lbscache.util;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
-@Component
+/**
+ * http 相关工具
+ */
 public class HttpUtil {
 
-
+    /**
+     * 返回JSON格式的HTTP请求
+     * @param requestUrl
+     * @param requestMethod
+     * @return
+     */
     public static JSONObject httpRequestJSON(String requestUrl, String requestMethod) {
         JSONObject jsonObject = null;
         String buffer = httpRequest(requestUrl,requestMethod);
@@ -24,6 +26,12 @@ public class HttpUtil {
         return jsonObject;
     }
 
+    /**
+     * HTTP请求
+     * @param requestUrl
+     * @param requestMethod
+     * @return
+     */
     public static String httpRequest(String requestUrl, String requestMethod) {
         StringBuffer buffer = new StringBuffer();
         String retStr = null;

@@ -1,5 +1,7 @@
 package com.zdxk.lbscache.model;
 
+import com.alibaba.fastjson.JSONObject;
+
 public class BaseStationInfo {
 
     private Integer id;
@@ -22,7 +24,7 @@ public class BaseStationInfo {
 
     private String address;
 
-    private String reserved1;
+    private String cacheAge;
 
     private String reserved2;
 
@@ -31,6 +33,20 @@ public class BaseStationInfo {
     private String reserved4;
 
     private String reserved5;
+
+    public BaseStationInfo(LbsData lbsData , JSONObject location){
+        this.mcc = lbsData.getMcc();
+        this.mnc = lbsData.getMnc();
+        this.lac = lbsData.getLac();
+        this.ci = lbsData.getCi();
+        this.lon = location.getString("lon");
+        this.lat = location.getString("lat");
+        this.coord = "bd09";
+        this.radius = location.getString("radius");
+        this.address = location.getString("address");
+        this.cacheAge = "0";
+
+    }
 
     public BaseStationInfo(String mcc, String mnc, String lac,
                            String ci, String lon, String lat,
@@ -129,12 +145,12 @@ public class BaseStationInfo {
         this.address = address == null ? null : address.trim();
     }
 
-    public String getReserved1() {
-        return reserved1;
+    public String getCacheAge() {
+        return cacheAge;
     }
 
-    public void setReserved1(String reserved1) {
-        this.reserved1 = reserved1 == null ? null : reserved1.trim();
+    public void setCacheAge(String cacheAge) {
+        this.cacheAge = cacheAge == null ? null : cacheAge.trim();
     }
 
     public String getReserved2() {
