@@ -184,4 +184,25 @@ public class BaseStationInfo {
     public void setReserved5(String reserved5) {
         this.reserved5 = reserved5 == null ? null : reserved5.trim();
     }
+
+    @Override
+    public String toString() {
+        return "BaseStationInfo{" +
+                "id=" + id +
+                ", mcc='" + mcc + '\'' +
+                ", mnc='" + mnc + '\'' +
+                ", lac='" + lac + '\'' +
+                ", ci='" + ci + '\'' +
+                ", lon='" + lon + '\'' +
+                ", lat='" + lat + '\'' +
+                ", coord='" + coord + '\'' +
+                ", radius='" + radius + '\'' +
+                ", address='" + address + '\'' +
+                ", cacheAge='" + cacheAge + '\'' +
+                ", reserved2='" + reserved2 + '\'' +
+                ", reserved3='" + reserved3 + '\'' +
+                ", reserved4='" + reserved4 + '\'' +
+                ", reserved5='" + reserved5 + '\'' +
+                '}';
+    }
 }

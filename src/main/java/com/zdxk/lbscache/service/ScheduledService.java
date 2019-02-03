@@ -15,7 +15,10 @@ public class ScheduledService {
     @Autowired
     LbsConf lbsConf;
 
-    @Scheduled(cron="0 0 0 1/1 * ? *")
+    /**
+     * 每日0点清除过期缓存
+     */
+    @Scheduled(cron="0 0 0 1/1 * ?")
     public void cacheTask() {
 
 

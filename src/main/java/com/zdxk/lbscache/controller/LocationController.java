@@ -42,7 +42,7 @@ public class LocationController {
 
         //errorcode 为 0 表示返回结果正常则加入缓存
         if(location.getString("errcode").equals("0")){
-            BaseStationInfo stationInfo = new BaseStationInfo();
+            BaseStationInfo stationInfo = new BaseStationInfo(lbsData,location);
             baseStationInfoService.insertBaseStationInfo(stationInfo);
         }
 
