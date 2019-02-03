@@ -13,7 +13,7 @@ import com.alibaba.fastjson.JSONObject;
 
 @Controller
 @RequestMapping(value = "/location")
-public class RequestController {
+public class LocationController {
 
     @Autowired
     LbsConf lbsConf;
