@@ -5,14 +5,16 @@ import com.zdxk.lbscache.model.BaseStationInfo;
 import com.zdxk.lbscache.model.LbsData;
 import com.zdxk.lbscache.service.BaseStationInfoService;
 import com.zdxk.lbscache.util.HttpUtil;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.fastjson.JSONObject;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@RequestMapping(value = "/location")
+@RestController
+@RequestMapping(value = "/location" )
 public class LocationController {
 
     @Autowired
@@ -20,6 +22,7 @@ public class LocationController {
 
     @Autowired
     private BaseStationInfoService baseStationInfoService;
+
 
     @ResponseBody
     @RequestMapping(value = "/lbs", produces = {"application/json;charset=UTF-8"})

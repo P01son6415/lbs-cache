@@ -23,7 +23,6 @@
     3. 在 model/LbsData 类中修改toParam()方法
     
  
- 
  LICENSE
  -------  
     Licensed under the Apache License, Version 2.0 (the "License");
